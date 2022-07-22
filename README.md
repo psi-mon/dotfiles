@@ -1,2 +1,2 @@
 # dotfiles
-Contains my dotfiles
+Contains my dotfiles.

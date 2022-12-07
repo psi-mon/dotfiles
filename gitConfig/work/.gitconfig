@@ -1,0 +1,18 @@
+[user]
+	name = Plutz, Simon
+	email = simon.plutz@zoi.de
+[credential]
+	helper = osxkeychain
+[core]
+	excludesfile = /Users/simon/.gitignore_global
+	autocrlf = input
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/simon/.stCommitMsg
+[http]
+	postBuffer = 157286400

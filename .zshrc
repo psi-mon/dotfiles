@@ -137,7 +137,8 @@ ZSH_THEME="half-life"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(aws fzf zsh-completions git brew npm react-native)
-autoload -U compinit && compinit
+autoload -U compinit && compinit  
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
 
 # User configuration

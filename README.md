@@ -48,3 +48,9 @@ ln -s ~/dotfiles/gitConfig/work/.gitconfig ~/.gitconfig
 ### Alfred
 
 Point preference file sync to `~/Dropbox/appdata/Alfred/`
+
+
+### Rectangle Pro 
+Import setting from `~/dotfiles/rectanglePro/RectangleProConfig.json`
+
+

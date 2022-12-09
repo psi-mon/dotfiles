@@ -269,13 +269,6 @@ time([[Defining packer_plugins]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
-pcall(vim.api.nvim_create_user_command, 'VimspectorUpdate', function(cmdargs)
-          require('packer.load')({'vimspector'}, { cmd = 'VimspectorUpdate', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'vimspector'}, { cmd = 'VimspectorUpdate' }, _G.packer_plugins)
-          return vim.fn.getcompletion('VimspectorUpdate ', 'cmdline')
-      end})
 pcall(vim.api.nvim_create_user_command, 'VimspectorInstall', function(cmdargs)
           require('packer.load')({'vimspector'}, { cmd = 'VimspectorInstall', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
         end,
@@ -283,15 +276,22 @@ pcall(vim.api.nvim_create_user_command, 'VimspectorInstall', function(cmdargs)
           require('packer.load')({'vimspector'}, { cmd = 'VimspectorInstall' }, _G.packer_plugins)
           return vim.fn.getcompletion('VimspectorInstall ', 'cmdline')
       end})
+pcall(vim.api.nvim_create_user_command, 'VimspectorUpdate', function(cmdargs)
+          require('packer.load')({'vimspector'}, { cmd = 'VimspectorUpdate', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'vimspector'}, { cmd = 'VimspectorUpdate' }, _G.packer_plugins)
+          return vim.fn.getcompletion('VimspectorUpdate ', 'cmdline')
+      end})
 time([[Defining lazy-load commands]], false)
 
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Function lazy-loads
 time([[Defining lazy-load function autocommands]], true)
+vim.cmd[[au FuncUndefined vimspector#Launch() ++once lua require("packer.load")({'vimspector'}, {}, _G.packer_plugins)]]
 vim.cmd[[au FuncUndefined vimspector#ToggleBreakpoint ++once lua require("packer.load")({'vimspector'}, {}, _G.packer_plugins)]]
 vim.cmd[[au FuncUndefined vimspector#Continue ++once lua require("packer.load")({'vimspector'}, {}, _G.packer_plugins)]]
-vim.cmd[[au FuncUndefined vimspector#Launch() ++once lua require("packer.load")({'vimspector'}, {}, _G.packer_plugins)]]
 time([[Defining lazy-load function autocommands]], false)
 vim.cmd("augroup END")
 

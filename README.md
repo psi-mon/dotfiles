@@ -53,4 +53,17 @@ Point preference file sync to `~/Dropbox/appdata/Alfred/`
 ### Rectangle Pro 
 Import setting from `~/dotfiles/rectanglePro/RectangleProConfig.json`
 
+### Webstorm
 
+For some reasons, the sync settings feature of Webstorm does not work for me so the settings have to be manually 
+exported and imported.
+
+The following plugins need to be installed:
+
+- IdeaVim 
+- AceJump
+- Ideavim-Easymotions
+
+```bash
+ln -s ~/dotfiles/.ideavimrc ~/.ideavimrc
+```

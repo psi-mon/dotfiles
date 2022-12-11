@@ -17,6 +17,10 @@ chpwd_profile_IPP() {
     fi
 }
 
+#added script folder to PATH
+if [[ :$PATH: != *:$HOME/scripts:* ]]; then
+  PATH=$HOME/scripts:$PATH
+fi
 # Stolen from: http://git.grml.org/?p=grml-etc-core.git;f=etc/zsh/zshrc;hb=HEAD#l1558
 #
 # chpwd_profiles(): Directory Profiles, Quickstart:
@@ -176,7 +180,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias lg=lazygit
-alias readlink=greadlink
+#alias readlink=greadlink
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion

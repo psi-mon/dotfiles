@@ -9,7 +9,9 @@ require "user.treesitter"
 require "user.autopairs"
 require "user.comment"
 require "user.gitsigns"
-require "user.nvim-tree"
+require("nvim-tree").setup({
+  on_attach = on_attach,
+})
 require "user.bufferline"
 require "user.lualine"
 require "user.toggleterm"

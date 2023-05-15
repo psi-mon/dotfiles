@@ -16,3 +16,5 @@
 	template = /Users/simon/.stCommitMsg
 [http]
 	postBuffer = 157286400
+[pull]
+	rebase = true

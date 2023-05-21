@@ -31,6 +31,10 @@ Further setup instructions [here](https://github.com/LunarVim/Neovim-from-scratc
 ```bash
 ln -s ~/dotfiles/nvim ~/.config/nvim
 ```
+Run Packer sync
+```bash
+:PackerSync
+```
 
 ### Ranger
 

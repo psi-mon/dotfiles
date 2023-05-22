@@ -105,6 +105,13 @@ local mappings = {
   T = {
     name = "Tools",
     p = { "<cmd>tabnew | r !pbpaste | jq \"fromjson\"  <cr>", "Pretty Json" },
+    d = {
+      function() local filename = vim.fn.input('Enter filename:')
+      local path = '~/Library/Application Support/DEVONthink 3/Inbox/'
+      vim.api.nvim_command(':write'.. path .. filename)
+      end,
+      "Save to Devonthink"
+    }
   },
 
   p = {

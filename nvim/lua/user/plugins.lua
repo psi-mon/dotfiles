@@ -96,6 +96,9 @@ return packer.startup(function(use)
   -- Git
   use "lewis6991/gitsigns.nvim"
 
+  -- Copilot
+  use "github/copilot.vim"
+
 -- vimspector
 use {
   "puremourning/vimspector",

@@ -63,8 +63,8 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Diagnostic --
-keymap("n","ge","<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",opts)
-keymap("n","gd","<cmd>lua vim.lsp.buf.definition()<CR>",opts)
+--keymap("n","ge","<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",opts)
+--keymap("n","gd","<cmd>lua vim.lsp.buf.definition()<CR>",opts)
 --keymap("n","gi","<cmd>lua vim.lsp.buf.signature_help()<CR>",opts)
 
 -- Debug Specific Keybinding

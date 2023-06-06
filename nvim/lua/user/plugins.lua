@@ -89,7 +89,7 @@ return packer.startup(function(use)
   -- Treesitter
  use {
 		"nvim-treesitter/nvim-treesitter",
-		commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
+		commit = "1b5a7334bb9862abafcf6676d2a2a6973d15ae3a",
 	} 
   use "p00f/nvim-ts-rainbow"
   use { "JoosepAlviste/nvim-ts-context-commentstring", commit = "4d3a68c41a53add8804f471fcc49bb398fe8de08" } 

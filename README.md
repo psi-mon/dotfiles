@@ -35,7 +35,10 @@ Run Packer sync
 ```bash
 :PackerSync
 ```
-
+Update treesitter
+```bash
+:TSUpdate
+```
 ### Ranger
 
 ```bash

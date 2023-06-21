@@ -180,6 +180,10 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 #VI-mode config
 VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 VI_MODE_SET_CURSOR=true
+VI_MODE_CURSOR_NORMAL=1
+VI_MODE_CURSOR_VISUAL=6
+VI_MODE_CURSOR_INSERT=5
+VI_MODE_CURSOR_OPPEND=0
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"

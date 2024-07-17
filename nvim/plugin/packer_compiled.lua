@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/zoiman/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/zoiman/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/zoiman/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/zoiman/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/zoiman/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/Users/zoiman/.cache/nvim/packer_hererocks/2.1.1710088188/share/lua/5.1/?.lua;/Users/zoiman/.cache/nvim/packer_hererocks/2.1.1710088188/share/lua/5.1/?/init.lua;/Users/zoiman/.cache/nvim/packer_hererocks/2.1.1710088188/lib/luarocks/rocks-5.1/?.lua;/Users/zoiman/.cache/nvim/packer_hererocks/2.1.1710088188/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/zoiman/.cache/nvim/packer_hererocks/2.1.1710088188/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -88,6 +88,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/zoiman/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
+  },
+  ["bigfile.nvim"] = {
+    loaded = true,
+    path = "/Users/zoiman/.local/share/nvim/site/pack/packer/start/bigfile.nvim",
+    url = "https://github.com/LunarVim/bigfile.nvim"
   },
   ["bufferline.nvim"] = {
     loaded = true,
@@ -284,17 +289,17 @@ time([[Defining packer_plugins]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file VimspectorInstall lua require("packer.load")({'vimspector'}, { cmd = "VimspectorInstall", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file VimspectorUpdate lua require("packer.load")({'vimspector'}, { cmd = "VimspectorUpdate", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file VimspectorInstall lua require("packer.load")({'vimspector'}, { cmd = "VimspectorInstall", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 time([[Defining lazy-load commands]], false)
 
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Function lazy-loads
 time([[Defining lazy-load function autocommands]], true)
-vim.cmd[[au FuncUndefined vimspector#Continue ++once lua require("packer.load")({'vimspector'}, {}, _G.packer_plugins)]]
 vim.cmd[[au FuncUndefined vimspector#Launch() ++once lua require("packer.load")({'vimspector'}, {}, _G.packer_plugins)]]
 vim.cmd[[au FuncUndefined vimspector#ToggleBreakpoint ++once lua require("packer.load")({'vimspector'}, {}, _G.packer_plugins)]]
+vim.cmd[[au FuncUndefined vimspector#Continue ++once lua require("packer.load")({'vimspector'}, {}, _G.packer_plugins)]]
 time([[Defining lazy-load function autocommands]], false)
 vim.cmd("augroup END")
 

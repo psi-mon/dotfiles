@@ -98,7 +98,8 @@ return packer.startup(function(use)
  use { "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" } 
   -- Copilot
   use "github/copilot.vim"
-
+-- bigfiles
+  use{"LunarVim/bigfile.nvim"}
 -- vimspector
 use {
   "puremourning/vimspector",

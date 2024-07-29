@@ -1,21 +1,4 @@
-zstyle ":chpwd:profiles:$HOME/Dev/BTA-Zendesk(|/|/*)" profile BTA
-zstyle ":chpwd:profiles:$HOME/Dev/IPP(|/|/*)" profile IPP
 
-chpwd_profile_BTA() {
-    [[ ${profile} == "${CHPWD_PROFILE}" ]] && return 1
-    print "LOADING .env configuration on $HOME/Dev/BTA-Zendesk/.env"
-    if [[ -f "$HOME/Dev/BTA-Zendesk/.env" ]]; then
-        source $HOME/Dev/BTA-Zendesk/.env
-    fi
-}
-
-chpwd_profile_IPP() {
-    [[ ${profile} == "${CHPWD_PROFILE}" ]] && return 1
-    print "LOADING .env configuration on $HOME/Dev/IPP/.env"
-    if [[ -f "$HOME/Dev/IPP/.env" ]]; then
-        source $HOME/Dev/IPP/.env
-    fi
-}
 
 #added script folder to PATH
 if [[ :$PATH: != *:$HOME/scripts:* ]]; then
@@ -140,7 +123,7 @@ ZSH_THEME="half-life"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(aws fzf  git brew npm react-native vi-mode)
+plugins=(aws fzf  git brew npm react-native)
 autoload -U compinit && compinit  
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
@@ -188,6 +171,9 @@ VI_MODE_CURSOR_OPPEND=0
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias lg=lazygit
+# work related Aliases
+alias connect_crew='pgcli -D dev-crew'
+alias connect_dev='pgcli -D dev-core'
 #alias readlink=greadlink
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm

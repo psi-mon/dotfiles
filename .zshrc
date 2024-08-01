@@ -161,7 +161,8 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-alias fzn='nvim $(fzf)'
+alias fff='nvim $(fzf)'
+alias ffd='cd $(fd -t d -d 8 | fzf)'
 #VI-mode config
 VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 VI_MODE_SET_CURSOR=true

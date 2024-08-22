@@ -48,7 +48,7 @@ return packer.startup(function(use)
   use { "numToStr/Comment.nvim", commit = "97a188a98b5a3a6f9b1b850799ac078faa17ab67" }
   use { "kyazdani42/nvim-web-devicons", commit = "563f3635c2d8a7be7933b9e547f7c178ba0d4352" }
   use { "kyazdani42/nvim-tree.lua", commit = "7282f7de8aedf861fe0162a559fc2b214383c51c" }  
-  use { "akinsho/bufferline.nvim", commit = "83bf4dc7bff642e145c8b4547aa596803a8b4dc4" }
+  use { "akinsho/bufferline.nvim", commit = "73540cb95f8d95aa1af3ed57713c6720c78af915" }
   use { "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" }
   use { "nvim-lualine/lualine.nvim", commit = "a52f078026b27694d2290e34efa61a6e4a690621" }
   use { "akinsho/toggleterm.nvim", commit = "2a787c426ef00cb3488c11b14f5dcf892bbd0bda" }
@@ -88,10 +88,14 @@ return packer.startup(function(use)
   use { "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" }
 
   -- Treesitter
- use {
-		"nvim-treesitter/nvim-treesitter",
-		commit = "1b5a7334bb9862abafcf6676d2a2a6973d15ae3a",
-	} 
+    use {
+        'nvim-treesitter/nvim-treesitter',
+    commit = "6ed65c3a1d0ebc1813a0fcec3d930c149dcf00aa",
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end,
+    }
   use "p00f/nvim-ts-rainbow"
   use { "JoosepAlviste/nvim-ts-context-commentstring", commit = "4d3a68c41a53add8804f471fcc49bb398fe8de08" } 
   -- Git

@@ -5,11 +5,28 @@ git clone https://github.com/psi-mon/dotfiles.git
 
 ```
 ### Install Brewfile
-todo
+
+```bash
+ln -s ~/dotfiles/Brewfiles/work/Brewfile ~/Brewfile
+```
+
+install Brewfile
+
+```bash
+brew bundle
+```
 
 ### iTerm2
 
 #### iTerm2 profile
+
+```bash
+# Specify the preferences directory
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm2"
+# Tell iTerm2 to use the custom preferences in the directory
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+```
+
 Reference `dotfiles/iTerm2/com.googlecode.iterm2.plist` as described in [here](http://stratus3d.com/blog/2015/02/28/sync-iterm2-profile-with-dotfiles-repository/)
 
 #### Install Nerdfont
@@ -24,6 +41,14 @@ Install Nerdfont as described [here](https://webinstall.dev/nerdfont/)
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/Dropbox/appdata/Mackup/.oh-my-zsh/custom ~/.oh-my-zsh/custom
 ```
+
+### tmux
+
+```bash
+ln -s ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
+```
+
+install [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 
 ### nvim
 Further setup instructions [here](https://github.com/LunarVim/Neovim-from-scratch)
@@ -55,7 +80,7 @@ ln -s ~/dotfiles/gitConfig/work/.gitconfig ~/.gitconfig
 ### Alfred
 
 Point preference file sync to `~/Dropbox/appdata/Alfred/`
-
+and make sure that the dropbox files are offline available!
 
 ### Rectangle Pro 
 Import setting from `~/dotfiles/rectanglePro/RectangleProConfig.json`

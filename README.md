@@ -64,6 +64,17 @@ Update treesitter
 ```bash
 :TSUpdate
 ```
+### pgcli
+
+```bash
+ln -s ~/dotfiles/pgcli/config ~/.config/pgcli/config
+```
+
+create a `.pgpass` file in the home directory with the needed passw as described here:
+https://postgresql.org/docs/9.3/libpq-pgpass.html
+
+```bash
+
 ### Ranger
 
 ```bash

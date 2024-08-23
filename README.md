@@ -15,6 +15,12 @@ install Brewfile
 ```bash
 brew bundle
 ```
+#### Setup brew aliases
+
+```bash
+ln -s ~/dotfiles/.brew-aliases ~/.brew-aliases
+```
+
 
 ### iTerm2
 

@@ -77,6 +77,7 @@ cask "pritunl"
 cask "rectangle-pro"
 cask "redisinsight"
 cask "sublime-text"
+cask "uhk-agent"
 cask "webstorm"
 mas "Developer", id: 640199958
 mas "GarageBand", id: 682658836

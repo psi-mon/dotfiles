@@ -177,6 +177,7 @@ alias lg=lazygit
 # work related Aliases
 alias connect_crew='pgcli -D dev-crew'
 alias connect_dev='pgcli -D dev-core'
+alias connect_prod='tmux select-pane -P bg=#96240B && pgcli -D prod'
 #alias readlink=greadlink
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm

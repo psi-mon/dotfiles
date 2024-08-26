@@ -116,3 +116,16 @@ The following plugins need to be installed:
 ```bash
 ln -s ~/dotfiles/.ideavimrc ~/.ideavimrc
 ```
+
+### OS specific settings
+
+#### disable character selector when press and hols special keys
+```bash
+defaults write -g ApplePressAndHoldEnabled -bool false
+```
+
+
+
+
+
+

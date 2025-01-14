@@ -235,6 +235,7 @@ find_id = SELECT * FROM $1 WHERE id = '$2'
 # example_dsn = postgresql://[user[:password]@][netloc][:port][/dbname]
 dev-crew = 'postgresql://postgres@cc-shared-dev-crew.cluster-ccpflkqa0rbt.eu-west-1.rds.amazonaws.com:5432/company'
 dev-core = postgresql://postgres@cc-shared-dev.cluster-c5vlj4ue9d60.eu-west-1.rds.amazonaws.com:5432/customer
+staging = 'postgresql://postgres@cc-shared-staging.cluster-c6go1bldiq1a.eu-west-1.rds.amazonaws.com:5432/company'
 prod = 'postgresql://postgres@cc-shared-prod.cluster-c6atoecfs33f.eu-west-1.rds.amazonaws.com:5432/company'
 # Format for number representation
 # for decimal "d" - 12345678, ",d" - 12,345,678

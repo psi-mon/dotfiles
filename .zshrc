@@ -180,6 +180,7 @@ alias connect_crew='op run --env-file="/Users/zoiman/.config/pgcli/crew-dev.env"
 #alias connect_crew='pgcli -D dev-crew'
 
 alias connect_dev='op run --env-file="/Users/zoiman/.config/pgcli/dev-core.env" --no-masking  -- pgcli -D dev-core'
+alias connect_staging='op run --env-file="/Users/zoiman/.config/pgcli/staging.env" --no-masking  -- pgcli -D staging'
 alias connect_prod='tmux select-pane -P bg=#96240B && op run --env-file="/Users/zoiman/.config/pgcli/prod.env" --no-masking  -- pgcli -D prod'
 
 use_aws() {
@@ -187,6 +188,15 @@ use_aws() {
     shift
     op run --env-file="/Users/zoiman/.aws/${env_file}.env" -- "$@"
 }
+# Define the completion function for use_aws
+_use_aws_completions() {
+    local env_files=("dev-core" "dev-crew")  
+    compadd "${env_files[@]}"
+}
+
+# Register the completion function for use_aws
+compdef _use_aws_completions use_aws
+
 #alias readlink=greadlink
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm

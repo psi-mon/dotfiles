@@ -1,0 +1,82 @@
+{
+  // global settings
+    "files.associations": {
+        "*.gs": "javascript"
+    },
+    "editor.lineNumbers": "relative",
+    "window.commandCenter": 1,
+  // vim settings
+    "vim.leader": "<space>",
+    "vim.useSystemClipboard": true,
+    "vim.surround": true,
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.relativenumber": true,  
+
+    // vim normal mode key bindings
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "j"],
+            "after": ["<leader>", "<leader>", "2", "s"]
+        },
+ // Window navigation
+        {
+            "before": ["<C-h>"],
+            "after": ["<C-w>", "h"]
+        },
+        {
+            "before": ["<C-j>"],
+            "after": ["<C-w>", "j"]
+        },
+        {
+            "before": ["<C-k>"],
+            "after": ["<C-w>", "k"]
+        },
+        {
+            "before": ["<C-l>"],
+            "after": ["<C-w>", "l"]
+        },
+        // File operations
+        {
+            "before": ["<leader>", "w"],
+            "commands": [":w"]
+        },
+        // Close operations
+        {
+            "before": ["<C-w>"],
+            "commands": ["workbench.action.closeActiveEditor"]
+        },
+        {
+            "before": ["<leader>", "q", "a"],
+            "commands": ["workbench.action.closeAllEditors"]
+        },
+        // Line movement
+        {
+            "before": ["<A-j>"],
+            "commands": ["editor.action.moveLinesDownAction"]
+        },
+        {
+            "before": ["<A-k>"],
+            "commands": ["editor.action.moveLinesUpAction"]
+        },
+        // error navigation
+        {
+            "before": ["<leader>", "g", "e"],
+            "commands": ["editor.action.marker.next"]
+        },
+        {
+            "before": ["<leader>", "g", "E"],
+            "commands": ["editor.action.marker.prev"]
+        }
+    ],
+   // File explorer (equivalent to NERDTree)
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["<leader>", "e"],
+            "commands": ["workbench.view.explorer"]
+        }
+    ],
+    "workbench.colorTheme": "Dracula Theme"
+}

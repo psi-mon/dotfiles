@@ -21,6 +21,10 @@
             "before": ["<leader>", "j"],
             "after": ["<leader>", "<leader>", "2", "s"]
         },
+        {
+            "before": ["<leader>", "t"],
+            "commands": ["workbench.action.terminal.toggleTerminal"]
+        },
  // Window navigation
         {
             "before": ["<C-h>"],
@@ -69,7 +73,18 @@
         {
             "before": ["<leader>", "g", "E"],
             "commands": ["editor.action.marker.prev"]
-        }
+        },
+        // go to goToImplementation
+        {
+            "before": ["<leader>", "g", "i"],
+            "commands": ["editor.action.goToImplementation"]
+        },
+        // go to goToDefinition
+        {
+            "before": ["<leader>", "g", "d"],
+            "commands": ["editor.action.revealDefinition"]
+        },
+        
     ],
    // File explorer (equivalent to NERDTree)
     "vim.normalModeKeyBindings": [

@@ -28,5 +28,14 @@
     {
         "key": "shift+cmd+[",
         "command": "-workbench.action.previousEditor"
+    },
+    {
+        "key": "cmd+h",
+        "command": "-editor.action.simpleInlineDiffs.rejectAll",
+        "when": "editorTextFocus && hasDisplayedSimpleDiff"
+    },
+    {
+        "key": "cmd+h",
+        "command": "workbench.action.closePanel"
     }
 ]

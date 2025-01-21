@@ -1,41 +1,56 @@
 // Place your key bindings in this file to override the defaults
 [
-    {
-        "key": "ctrl+\\",
-        "command": "workbench.action.splitEditorRight"
-    },
-    {
-        "key": "cmd+r cmd+\\",
-        "command": "-workbench.action.splitEditorRight"
-    },
-    {
-        "key": "shift+l",
-        "command": "-notebook.toggleLineNumbers",
-        "when": "notebookEditorFocused && !inputFocus && !notebookOutputFocused"
-    },
-    {
-        "key": "shift+l",
-        "command": "workbench.action.nextEditor"
-    },
-    {
-        "key": "shift+cmd+]",
-        "command": "-workbench.action.nextEditor"
-    },
-    {
-        "key": "shift+j",
-        "command": "workbench.action.previousEditor"
-    },
-    {
-        "key": "shift+cmd+[",
-        "command": "-workbench.action.previousEditor"
-    },
-    {
-        "key": "cmd+h",
-        "command": "-editor.action.simpleInlineDiffs.rejectAll",
-        "when": "editorTextFocus && hasDisplayedSimpleDiff"
-    },
-    {
-        "key": "cmd+h",
-        "command": "workbench.action.closePanel"
-    }
+  {
+    "key": "ctrl+\\",
+    "command": "workbench.action.splitEditorRight"
+  },
+  {
+    "key": "cmd+r cmd+\\",
+    "command": "-workbench.action.splitEditorRight"
+  },
+  {
+    "key": "shift+l",
+    "command": "-notebook.toggleLineNumbers",
+    "when": "notebookEditorFocused && !inputFocus && !notebookOutputFocused"
+  },
+  {
+    "key": "shift+l",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "shift+cmd+]",
+    "command": "-workbench.action.nextEditor"
+  },
+  {
+    "key": "shift+j",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "shift+cmd+[",
+    "command": "-workbench.action.previousEditor"
+  },
+  {
+    "key": "cmd+h",
+    "command": "-editor.action.simpleInlineDiffs.rejectAll",
+    "when": "editorTextFocus && hasDisplayedSimpleDiff"
+  },
+  {
+    "key": "cmd+h",
+    "command": "workbench.action.closePanel"
+  },
+  {
+    "key": "ctrl+m",
+    "command": "workbench.action.moveEditorToNextGroup",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.moveEditorToPreviousGroup",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "escape",
+    "command": "workbench.action.focusFirstEditorGroup",
+    "when": "filesExplorerFocus"
+  }
 ]

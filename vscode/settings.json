@@ -1,98 +1,148 @@
 {
+  // ... your other settings ...
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   // global settings
-    "files.associations": {
-        "*.gs": "javascript"
-    },
-    "editor.lineNumbers": "relative",
-    "window.commandCenter": 1,
+  "files.associations": {
+    "*.gs": "javascript"
+  },
+  "editor.lineNumbers": "relative",
+  "window.commandCenter": true,
   // vim settings
-    "vim.leader": "<space>",
-    "vim.useSystemClipboard": true,
-    "vim.surround": true,
-    "vim.easymotion": true,
-    "vim.incsearch": true,
-    "vim.useCtrlKeys": true,
-    "vim.hlsearch": true,
-    "vim.relativenumber": true,  
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "vim.surround": true,
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.relativenumber": true,
 
-    // vim normal mode key bindings
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": ["<leader>", "j"],
-            "after": ["<leader>", "<leader>", "2", "s"]
-        },
-        {
-            "before": ["<leader>", "t"],
-            "commands": ["workbench.action.terminal.toggleTerminal"]
-        },
- // Window navigation
-        {
-            "before": ["<C-h>"],
-            "after": ["<C-w>", "h"]
-        },
-        {
-            "before": ["<C-j>"],
-            "after": ["<C-w>", "j"]
-        },
-        {
-            "before": ["<C-k>"],
-            "after": ["<C-w>", "k"]
-        },
-        {
-            "before": ["<C-l>"],
-            "after": ["<C-w>", "l"]
-        },
-        // File operations
-        {
-            "before": ["<leader>", "w"],
-            "commands": [":w"]
-        },
-        // Close operations
-        {
-            "before": ["<C-w>"],
-            "commands": ["workbench.action.closeActiveEditor"]
-        },
-        {
-            "before": ["<leader>", "q", "a"],
-            "commands": ["workbench.action.closeAllEditors"]
-        },
-        // Line movement
-        {
-            "before": ["<A-j>"],
-            "commands": ["editor.action.moveLinesDownAction"]
-        },
-        {
-            "before": ["<A-k>"],
-            "commands": ["editor.action.moveLinesUpAction"]
-        },
-        // error navigation
-        {
-            "before": ["<leader>", "g", "e"],
-            "commands": ["editor.action.marker.next"]
-        },
-        {
-            "before": ["<leader>", "g", "E"],
-            "commands": ["editor.action.marker.prev"]
-        },
-        // go to goToImplementation
-        {
-            "before": ["<leader>", "g", "i"],
-            "commands": ["editor.action.goToImplementation"]
-        },
-        // go to goToDefinition
-        {
-            "before": ["<leader>", "g", "d"],
-            "commands": ["editor.action.revealDefinition"]
-        },
-        
-    ],
-   // File explorer (equivalent to NERDTree)
-    "vim.normalModeKeyBindings": [
-        {
-            "before": ["<leader>", "e"],
-            "commands": ["workbench.view.explorer"]
-        }
-    ],
-    "workbench.colorTheme": "Dracula Theme",
-    "explorer.confirmDelete": false
+  // vim normal mode key bindings
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "j"],
+      "after": ["<leader>", "<leader>", "2", "s"]
+    },
+    {
+      "before": ["<leader>", "t"],
+      "commands": ["workbench.action.terminal.toggleTerminal"]
+    },
+    // Window navigation
+    {
+      "before": ["<C-h>"],
+      "after": ["<C-w>", "h"]
+    },
+    {
+      "before": ["<C-j>"],
+      "after": ["<C-w>", "j"]
+    },
+    {
+      "before": ["<C-k>"],
+      "after": ["<C-w>", "k"]
+    },
+    {
+      "before": ["<C-l>"],
+      "after": ["<C-w>", "l"]
+    },
+    // File operations
+    {
+      "before": ["<leader>", "w"],
+      "commands": [":w"]
+    },
+    // Close operations
+    {
+      "before": ["<C-w>"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<leader>", "q", "a"],
+      "commands": ["workbench.action.closeAllEditors"]
+    },
+    // Line movement
+    {
+      "before": ["<A-j>"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    {
+      "before": ["<A-k>"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    },
+    // error navigation
+    {
+      "before": ["<leader>", "g", "e"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["<leader>", "g", "E"],
+      "commands": ["editor.action.marker.prev"]
+    },
+    // go to goToImplementation
+    {
+      "before": ["<leader>", "g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    // go to goToDefinition
+    {
+      "before": ["<leader>", "g", "d"],
+      "commands": ["editor.action.revealDefinition"]
+    }
+  ],
+  // File explorer (equivalent to NERDTree)
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.view.explorer"]
+    },
+    {
+      "before": [",", "r"],
+      "commands": ["extension.runJest"]
+    },
+    {
+      "before": [",", "c"],
+      "commands": ["testing.runCurrentFile"]
+    },
+    {
+      "before": [",", "f"],
+      "commands": ["workbench.action.debug.selectandstart"]
+    },
+    {
+      "before": [",", "t"],
+      "commands": ["workbench.view.testing.focus"]
+    },
+    {
+      "before": [",", "u"],
+      "commands": ["testing.reRunLastRun"]
+    },
+    {
+      "before": [",", "f"],
+      "commands": ["testing.reRunFailTests"]
+    },
+    {
+      "before": [",", "b"],
+      "commands": ["editor.debug.action.toggleBreakpoint"]
+    },
+    {
+      "before": [",", "d"],
+      "commands": ["extension.debugJest"]
+    }
+  ],
+  "workbench.colorTheme": "Dracula Theme",
+  "explorer.confirmDelete": false,
+  "editor.fontSize": 16
 }

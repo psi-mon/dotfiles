@@ -575,3 +575,6 @@ keybinding:
     bulkMenu: b
   commitMessage:
     commitMenu: <c-o>
+
+services:
+  git.zoi.de: gitlab:git.zoi.de

@@ -60,7 +60,7 @@ Add the following content:
 
 ```bash
 #!/bin/bash
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export RESTIC_PASSWORD="your-restic-password"
 
 restic -r rclone:[rcloud config name]:restic-backups/macbook/ backup ~/Backups

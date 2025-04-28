@@ -1,8 +1,6 @@
 [user]
-	name = Plutz, Simon
-	email = simon.plutz@zoi.de
-[credential]
-	helper = osxkeychain
+	name = simon.plutz
+	email = simon.plutz@zoi.tech
 [core]
 	excludesfile = /Users/simon/.gitignore_global
 	autocrlf = input
@@ -18,3 +16,7 @@
 	postBuffer = 157286400
 [pull]
 	rebase = true
+[credential]
+	helper = osxkeychain
+[init]
+	defaultBranch = main

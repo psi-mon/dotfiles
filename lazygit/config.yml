@@ -578,3 +578,4 @@ keybinding:
 
 services:
   git.zoi.de: gitlab:git.zoi.de
+  gitlab.com: gitlab:gitlab.com

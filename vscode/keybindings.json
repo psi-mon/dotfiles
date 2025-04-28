@@ -15,7 +15,8 @@
   },
   {
     "key": "shift+l",
-    "command": "workbench.action.nextEditor"
+    "command": "workbench.action.nextEditor",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
   },
   {
     "key": "shift+cmd+]",
@@ -23,7 +24,8 @@
   },
   {
     "key": "shift+j",
-    "command": "workbench.action.previousEditor"
+    "command": "workbench.action.previousEditor",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
   },
   {
     "key": "shift+cmd+[",
@@ -52,5 +54,27 @@
     "key": "escape",
     "command": "workbench.action.focusFirstEditorGroup",
     "when": "filesExplorerFocus"
+  },
+  {
+    "key": "cmd+i",
+    "command": "composerMode.agent"
+  },
+  {
+    "key": "shift+f1",
+    "command": "workbench.action.showCommands"
+  },
+  {
+    "key": "f1",
+    "command": "-workbench.action.showCommands"
+  },
+  {
+    "key": "f1",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+r cmd+i",
+    "command": "-editor.action.showHover",
+    "when": "editorTextFocus"
   }
 ]

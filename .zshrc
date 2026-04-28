@@ -162,7 +162,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # For a full list of active aliases, run `alias`.
 #
 alias fff='nvim $(fzf)'
-alias ffd='cd $(fd -t d -d 8 | fzf)'
+alias ffd='cd "$(fd -t d -d 8 | fzf)"'
 #VI-mode config
 VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 VI_MODE_SET_CURSOR=true
@@ -210,3 +210,10 @@ if [ -f "$HOME/Users/simon/google-cloud-sdk/completion.zsh.inc" ]; then . '/User
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
+# Don't use Cursor/VS Code Git askpass - use system credential helper
+unset GIT_ASKPASS 2>/dev/null
+
+eval "$(zoxide init zsh)"
+ 
+# Added by Antigravity
+export PATH="/Users/zoiman/.antigravity/antigravity/bin:$PATH"

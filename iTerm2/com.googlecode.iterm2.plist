@@ -2,12 +2,38 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AIFeatureFunctionCalling</key>
+	<true/>
+	<key>AIFeatureHostedCodeInterpeter</key>
+	<false/>
+	<key>AIFeatureHostedFileSearch</key>
+	<false/>
+	<key>AIFeatureHostedWebSearch</key>
+	<false/>
+	<key>AIFeatureStreamingResponses</key>
+	<true/>
+	<key>AITermAPI</key>
+	<integer>5</integer>
+	<key>AIVectorStore</key>
+	<integer>0</integer>
+	<key>AIVendor</key>
+	<integer>3</integer>
+	<key>AiMaxTokens</key>
+	<integer>131072</integer>
+	<key>AiModel</key>
+	<string>myaniu/qwen2.5-1m:7b</string>
+	<key>AiResponseMaxTokens</key>
+	<integer>131072</integer>
+	<key>AitermURL</key>
+	<string>http://localhost:11434/api/chat</string>
 	<key>AllowClipboardAccess</key>
 	<true/>
 	<key>AlternateMouseScroll</key>
 	<true/>
 	<key>Default Bookmark Guid</key>
 	<string>B4B960B2-7BB4-465D-97C9-C71C437D00A2</string>
+	<key>Default Browser Profile Guid</key>
+	<string>D2699915-C5EF-4FE1-88CE-280105CBFE3A</string>
 	<key>DoubleReportScrollWheel</key>
 	<true/>
 	<key>GlobalKeyMap</key>
@@ -853,8 +879,16 @@
 	<false/>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>3</integer>
+	<key>ToolbeltTools</key>
+	<array>
+		<string>Codecierge</string>
+	</array>
+	<key>UseRecommendedAIModel</key>
+	<false/>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
+	<key>com.apple.WebPrivacy.ResourceMonitorURLsVersion</key>
+	<string>qrsAAAGXnXBrwGxMO6s=</string>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewPreferredModeKey</key>

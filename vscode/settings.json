@@ -1,25 +1,33 @@
 {
+  "terminal.integrated.profiles.osx": {
+    "vscode-tmux": {
+      "path": "/opt/homebrew/bin/tmux", // Adjust path if needed (run `which tmux` to check)
+      "args": ["new-session", "-A", "-s", "${workspaceFolderBasename}"],
+    },
+  },
+  "terminal.integrated.defaultProfile.osx": "vscode-tmux",
+
   // ... your other settings ...
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.eslint": "explicit",
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   // global settings
   "files.associations": {
-    "*.gs": "javascript"
+    "*.gs": "javascript",
   },
   "editor.lineNumbers": "relative",
   "window.commandCenter": true,
@@ -37,112 +45,113 @@
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["<leader>", "j"],
-      "after": ["<leader>", "<leader>", "2", "s"]
+      "after": ["<leader>", "<leader>", "2", "s"],
     },
     {
       "before": ["<leader>", "t"],
-      "commands": ["workbench.action.terminal.toggleTerminal"]
+      "commands": ["workbench.action.terminal.toggleTerminal"],
     },
     // Window navigation
     {
       "before": ["<C-h>"],
-      "after": ["<C-w>", "h"]
+      "after": ["<C-w>", "h"],
     },
     {
       "before": ["<C-j>"],
-      "after": ["<C-w>", "j"]
+      "after": ["<C-w>", "j"],
     },
     {
       "before": ["<C-k>"],
-      "after": ["<C-w>", "k"]
+      "after": ["<C-w>", "k"],
     },
     {
       "before": ["<C-l>"],
-      "after": ["<C-w>", "l"]
+      "after": ["<C-w>", "l"],
     },
     // File operations
     {
       "before": ["<leader>", "w"],
-      "commands": [":w"]
+      "commands": [":w"],
     },
     // Close operations
     {
       "before": ["<C-w>"],
-      "commands": ["workbench.action.closeActiveEditor"]
+      "commands": ["workbench.action.closeActiveEditor"],
     },
     {
       "before": ["<leader>", "q", "a"],
-      "commands": ["workbench.action.closeAllEditors"]
+      "commands": ["workbench.action.closeAllEditors"],
     },
     // Line movement
     {
       "before": ["<A-j>"],
-      "commands": ["editor.action.moveLinesDownAction"]
+      "commands": ["editor.action.moveLinesDownAction"],
     },
     {
       "before": ["<A-k>"],
-      "commands": ["editor.action.moveLinesUpAction"]
+      "commands": ["editor.action.moveLinesUpAction"],
     },
     // error navigation
     {
       "before": ["<leader>", "g", "e"],
-      "commands": ["editor.action.marker.next"]
+      "commands": ["editor.action.marker.next"],
     },
     {
       "before": ["<leader>", "g", "E"],
-      "commands": ["editor.action.marker.prev"]
+      "commands": ["editor.action.marker.prev"],
     },
     // go to goToImplementation
     {
       "before": ["<leader>", "g", "i"],
-      "commands": ["editor.action.goToImplementation"]
+      "commands": ["editor.action.goToImplementation"],
     },
     // go to goToDefinition
     {
       "before": ["<leader>", "g", "d"],
-      "commands": ["editor.action.revealDefinition"]
-    }
+      "commands": ["editor.action.revealDefinition"],
+    },
   ],
   // File explorer (equivalent to NERDTree)
   "vim.normalModeKeyBindings": [
     {
       "before": ["<leader>", "e"],
-      "commands": ["workbench.view.explorer"]
+      "commands": ["workbench.view.explorer"],
     },
     {
       "before": [",", "r"],
-      "commands": ["extension.runJest"]
+      "commands": ["extension.runJest"],
     },
     {
       "before": [",", "c"],
-      "commands": ["testing.runCurrentFile"]
+      "commands": ["testing.runCurrentFile"],
     },
     {
       "before": [",", "f"],
-      "commands": ["workbench.action.debug.selectandstart"]
+      "commands": ["workbench.action.debug.selectandstart"],
     },
     {
       "before": [",", "t"],
-      "commands": ["workbench.view.testing.focus"]
+      "commands": ["workbench.view.testing.focus"],
     },
     {
       "before": [",", "u"],
-      "commands": ["testing.reRunLastRun"]
+      "commands": ["testing.reRunLastRun"],
     },
     {
       "before": [",", "f"],
-      "commands": ["testing.reRunFailTests"]
+      "commands": ["testing.reRunFailTests"],
     },
     {
       "before": [",", "b"],
-      "commands": ["editor.debug.action.toggleBreakpoint"]
+      "commands": ["editor.debug.action.toggleBreakpoint"],
     },
     {
       "before": [",", "d"],
-      "commands": ["extension.debugJest"]
-    }
+      "commands": ["extension.debugJest"],
+    },
   ],
   "workbench.colorTheme": "Dracula Theme",
   "explorer.confirmDelete": false,
-  "editor.fontSize": 16
+  "editor.fontSize": 16,
+  "svelte.enable-ts-plugin": true,
 }
